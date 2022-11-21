@@ -1,0 +1,55 @@
+<!-- <div></div> -->
+<strong>Current Wallet amount: 0$</strong>
+<!-- select coin, cryptovalue, inr/usd -->
+
+<div class="container my-3 py-2 ">
+    <button (click)="activate()"> Add crypto to your wallet</button>
+    <select>
+        <option *ngFor="let row of coinData">{{row.name}}</option>
+    </select>
+    <input type="number" placeholder="Quantity In Crypto" class="ng-pristine ng-valid ng-touched">
+    <input type="number" placeholder="Quantity In Dollars" class="ng-pristine ng-valid ng-touched">
+    <button class="btn btn-info btn-sm btn-block" type="submit" value="Submit" (click)="addcrypto()">Add</button>
+
+</div>
+
+<!-- coin, coinid,  -->
+<table class="table table-hover table-dark my-4">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Coin</th>
+            <th scope="col">CoinID</th>
+            <th scope="col">Current Price</th>
+            <th scope="col">Invested</th>
+            <th scope="col">Wallet Amount</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">1</th>
+            <td>Bitcoin</td>
+            <td>Btc</td>
+            <td>-$70.66%</td>
+            <td>2 for 3$</td>
+            <td>33143.7 $</td>
+        </tr>
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+<!-- https://github.com/Wishk6/CryptoWalletFrontAngular -->
+<!-- https://cryptocrawler.guillaumesaurin.com/ -->
+
+
+<!-- <ng-container matColumnDef="price"></ng-container>
+<ng-container matColumnDef="dailychange"></ng-container>
+<ng-container matColumnDef="market_cap"></ng-container>
+<ng-container matColumnDef="24h_volume"></ng-container> -->
